@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+	{% block head %}
+		<title>Inspections</title>
+	{% endblock %}
+
+	{% block body %}
+		<h2>Food Services Reviews</h2>
+		{% for review in reviews %}
+			<p>Name: {{ foodservice.name }}</p>
+
+			<p>Address: {{ foodservice.address }}</p>
+
+			{% if foodservice.cuisine_type %}
+				<p>Food Service Cuisine: {{ foodservice.cuisine_type }}</p>
+			{% else %}
+				<p>Food Service Cuisine: n/a</p>
+			{% endif %}
+
+			{% if foodservice.phone %}
+				<p>Phone number: {{ foodservice.phone }}</p>
+			{% else %}
+				<p>Phone number: n/a</p>
+			{% endif %}
+			<br>
+
+		{% endfor %}
+	{% endblock %}
