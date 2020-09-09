@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<table>
+		<tr valign="top">
+			<td>
+				<h1>Food Service: {{ foodservice.name }}</h1>
+				{% if foodservice.address %}<p>Address: {{ foodservice.address }}</p>{% endif %}
+				{% if foodservice.cuisine_type %}<p>Cuisine Type: {{ foodservice.cuisine_type }}</p>{% endif %}
+				{% if foodservice.hours %}<p>Hours Open: {{ foodservice.hours }}</p>
+				{% endif %}
+			</td>
+		</tr>
+	</table>
+	<hr>
+	{% for review in reviews %}
+		{% include '_reviews.html' %}
+	{% endfor %}
+{% endblock %}

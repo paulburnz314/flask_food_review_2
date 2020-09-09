@@ -68,3 +68,11 @@ https://youtu.be/Tu4vRU4lt6k
 1. u = User(username='Susan', email='susan@example.com')
 1. db.session.add(u)
 1. db.session.commit()
+
+### Using flask shell
+what to do if you added a user without a password
+1. from app import db
+1. from app.models import *
+1. susan = User.query.get(2)
+1. susan.set_password('cathat1')
+1. db.session.commit()

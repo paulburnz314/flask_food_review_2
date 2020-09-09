@@ -1,9 +1,6 @@
 {% extends 'base.html' %}
-	{% block head %}
-		<title>Flask Food Review Home</title>
-	{% endblock %}
-
-	{% block body %}
-		<h1>Welcome, {{ user.username }} to the Home Page for Flask Food Review!</h1>
-	{% endblock %}
+	
+{% block body %}
+	<h1>Welcome, {{ current_user.username }} to the Home Page for Flask Food Review!</h1>
+{% endblock %}
 	
